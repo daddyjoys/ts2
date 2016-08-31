@@ -90,6 +90,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &1136672
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,6 +153,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+=======
+>>>>>>> e8bcabb09ed1b7f265aee6d9abc2823154e92971
 --- !u!1001 &7946788
 Prefab:
   m_ObjectHideFlags: 0
@@ -880,7 +883,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1509,6 +1512,52 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fc3de47a01bc244c81814df82944fa0, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1216106541
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000013239033724, guid: 237c355ef5090324caf4ba005dc0e791, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013239033724, guid: 237c355ef5090324caf4ba005dc0e791, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013239033724, guid: 237c355ef5090324caf4ba005dc0e791, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013239033724, guid: 237c355ef5090324caf4ba005dc0e791, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013239033724, guid: 237c355ef5090324caf4ba005dc0e791, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013239033724, guid: 237c355ef5090324caf4ba005dc0e791, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013239033724, guid: 237c355ef5090324caf4ba005dc0e791, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013239033724, guid: 237c355ef5090324caf4ba005dc0e791, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010608160386, guid: 237c355ef5090324caf4ba005dc0e791, type: 2}
+      propertyPath: m_Name
+      value: TankSets_0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 237c355ef5090324caf4ba005dc0e791, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1345561020
 Prefab:
