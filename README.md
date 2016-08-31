@@ -1,2 +1,3 @@
 # topSecrert
-Battle Tank
+# Battle Tank
+Игра состоит из 2-х сцен: главное меню и сама игровая сцена
