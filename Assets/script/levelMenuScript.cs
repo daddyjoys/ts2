@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class levelMenuScript : MonoBehaviour {
+	//Сцена сос писком уровней
 
 	public void loadLevel(int numLevel){
 		Application.LoadLevel("loadScene");
