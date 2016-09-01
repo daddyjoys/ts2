@@ -3,7 +3,71 @@ using System.Collections;
 
 public class levelScriptObject : MonoBehaviour {
 
-	public static string PERFAB_NAME = "UI\\textMenu";
+	private static string PERFAB_NAME = "UI\\textMenu";
+	
+	private string[] nameLevels;
+
+	//Позиция начала рисования записей об уровне
+	private Vector2 startPos = new Vector2(450f, 350f);
+
+	//Позиция смещения
+	private Vector2 deltaPos = new Vector2(120f, 40f);
+
+	//Количество строк записей уровня
+	private int countRow = 7;
+
+	//Количество уровней
+	public int countLevel = 10;
+
+
+	// Use this for initialization
+	void Start () {
+		nameLevels = new string[countLevel];
+
+		generateLevelName();
+
+		generateLevelTextUI();
+	}
+	
+	// Update is called once per frame
+	void Update () {
+	
+	}
+
+	//Проуедура генерирует и заполняет имена уровней по шаблону
+	private void generateLevelName(){
+		for(int i = 0; i < countLevel; i++){
+			nameLevels[i] = "Уровень " + (i+1).ToString();
+		}
+	}
+
+	//Процедура генерирует надписи на канвасе.
+	private void generateLevelTextUI(){
+		
+		GameObject canvas = GameObject.Find("Canvas");
+		if(canvas == null) {
+			Debug.LogError("Canvas not found");
+			return;
+		}
+		
+
+		int col = 0;
+		int numCol = 0;
+		int numRow = 0;
+		for(int i = 0; i < countLevel; i++, col++, numRow++){
+			if(col >= countRow){
+				col = 0;
+				numCol++;
+				numRow = 0;
+			}
+			Vector3 pos=  new Vector3();
+			pos.x = startPos.x + numCol * deltaPos.x;
+			pos.y = startPos.y - numRow * deltaPos.y;
+			levelScriptObject.Create(pos, canvas.transform, nameLevels[i]);
+		}
+	}
+
+	//Функция создания экземпляра объекта записи о уровне
 	public static void Create(
 		Vector3 pos, 
 		Transform parent, 
@@ -27,28 +91,5 @@ public class levelScriptObject : MonoBehaviour {
 			return;
 		}
 		t.text = text;
-	}
-	// Use this for initialization
-	void Start () {
-		//1. добавим надпись о уровне программно
-
-		GameObject canvas = GameObject.Find("Canvas");
-		if(canvas == null) {
-			Debug.LogError("Canvas not found");
-			return;
-		}
-		
-		levelScriptObject.Create(new Vector3(450, 350, 0), canvas.transform, "level 1");
-
-		levelScriptObject.Create(new Vector3(450, 330, 0), canvas.transform, "level 2");
-
-		levelScriptObject.Create(new Vector3(450, 310, 0), canvas.transform, "level 3");
-		
-		levelScriptObject.Create(new Vector3(450, 290, 0), canvas.transform, "level 4");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }
